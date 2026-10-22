@@ -25,6 +25,10 @@ select distinct on (listing_id)
     file_month
 from {{ ref('silver_listings') }}
 where listing_id is not null
+  -- dbt snapshot --vars '{"snapshot_as_of": "2020-09-01"}' makes this run see only months up to that date, 
+  -- so history can be rebuilt month by month if a run was missed.
+  -- With no var passed (normal job runs) the default lets every loaded month through.
+  and file_month <= '{{ var("snapshot_as_of", "9999-12-31") }}'::date
 order by listing_id, file_month desc
 
 {% endsnapshot %}
