@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: postgres
+    schema: bronze
+    tables:
+      - name: listings
+      - name: census_g01
+      - name: census_g02
+      - name: nsw_lga_code
+      - name: nsw_lga_suburb
