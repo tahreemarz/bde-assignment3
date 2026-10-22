@@ -1,4 +1,4 @@
-{{ config(materialized='view', schema='gold') }}
+{{ config(materialized = 'view', schema = 'gold') }}
 
 -- Datamart: metrics per listing_neighbourhood and month.
 -- Dimension attributes are resolved with the SCD2 date-range join, 

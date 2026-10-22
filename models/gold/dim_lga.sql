@@ -1,4 +1,4 @@
-{{ config(materialized='table', schema='gold') }}
+{{ config(materialized = 'table', schema = 'gold') }}
 
 -- Static LGA dimension (reference data, no SCD needed).
 

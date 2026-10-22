@@ -1,4 +1,4 @@
-{{ config(materialized='view', schema='gold') }}
+{{ config(materialized = 'view', schema = 'gold') }}
 
 -- Datamart: metrics per property_type, room_type, accommodates and month.
 -- Same definitions and SCD2 join as dm_listing_neighbourhood. 
