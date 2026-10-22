@@ -1,10 +1,10 @@
-{{ config(materialized='view', schema='gold') }}
+{{ config(materialized = 'view', schema = 'gold') }}
 
 -- Datamart: metrics per host_neighbourhood_lga and month.
 -- host_neighbourhood_lga is derived in dim_host from the suburb -> LGA mapping;
 -- hosts with a blank or unmatched neighbourhood fall under 'UNKNOWN'.
---
---   estimated revenue per host = total estimated revenue (active listings) / distinct hosts
+
+-- estimated revenue per host = total estimated revenue (active listings) / distinct hosts
 
 with base as (
 

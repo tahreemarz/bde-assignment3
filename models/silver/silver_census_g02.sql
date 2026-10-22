@@ -1,4 +1,4 @@
-{{ config(materialized='table', schema='silver') }}
+{{ config(materialized = 'table', schema = 'silver') }}
 
 select
     cast(replace(lga_code_2016, 'LGA', '') as integer) as lga_code,

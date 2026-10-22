@@ -1,8 +1,9 @@
-{{ config(materialized='table', schema='gold') }}
+{{ config(materialized = 'table', schema = 'gold') }}
 
--- Fact table: one row per listing per monthly file. IDs and metrics only; every
--- descriptive attribute lives in a dimension. Dimension lookups are resolved at query
--- time with the SCD2 date-range join, so no version keys are stored here.
+-- Fact table: one row per listing per monthly file.  
+-- IDs and metrics only; every descriptive attribute lives in a dimension. 
+-- Dimension lookups are resolved at query time with the SCD2 date-range join,
+-- so no version keys are stored here.
 
 select
     listing_id,

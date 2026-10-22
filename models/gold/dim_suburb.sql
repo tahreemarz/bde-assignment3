@@ -1,4 +1,4 @@
-{{ config(materialized='table', schema='gold') }}
+{{ config(materialized = 'table', schema = 'gold') }}
 
 -- Static suburb dimension (reference data, no SCD needed). 
 -- Each suburb maps to exactly one LGA in the source file; lga_code comes from dim_lga.

@@ -2,10 +2,10 @@
 
 {{
     config(
-        schema='silver',
-        unique_key='host_id',
-        strategy='timestamp',
-        updated_at='file_month'
+        schema = 'silver',
+        unique_key = 'host_id',
+        strategy = 'timestamp',
+        updated_at = 'file_month'
     )
 }}
 

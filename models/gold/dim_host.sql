@@ -1,9 +1,9 @@
-{{ config(materialized='table', schema='gold') }}
+{{ config(materialized = 'table', schema = 'gold') }}
 
 -- Host dimension (SCD2). Every version of a host is kept; 
 -- dbt_valid_from/dbt_valid_to define when each version was current. Join from the fact table with:
 -- f.file_month >= d.dbt_valid_from and f.file_month < coalesce(d.dbt_valid_to, '9999-12-31')
---
+
 -- host_neighbourhood is mapped to an LGA through dim_suburb. 
 -- Blank neighbourhoods (about a third of listings) and 
 -- values with no suburb match (e.g. 'OVERSEAS') are assigned the LGA 'UNKNOWN'.
